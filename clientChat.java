@@ -14,6 +14,7 @@ public class clientChat{
 		InetAddress address = InetAddress.getByName("127.0.0.1");
 		DatagramPacket packet = new DatagramPacket(b,b.length,address,port);
 		socket.send(packet);
+		b = null;
 		String message="";
 		while(true){
 			message = sc.nextLine();
@@ -22,6 +23,7 @@ public class clientChat{
 			packet = new DatagramPacket(b,b.length,address,port);
 			socket.send(packet);
 			if(message=="bye")break;
+			b = null;
 		}
 	}
 	catch(IOException e){
