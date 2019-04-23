@@ -24,6 +24,7 @@ public class clientChat{
 			socket.send(packet);
 			if(message=="bye")break;
 			b = null;
+			content=null;
 		}
 	}
 	catch(IOException e){

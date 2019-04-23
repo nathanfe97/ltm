@@ -20,6 +20,7 @@ public class serverChatHandle extends Thread{
 			String b2 = new String(b1,0,len);
 			System.out.print(b2);
 			b1 = null;
+			b2 = null;
 		}
 		catch(IOException e){
 			System.out.print("fail");
